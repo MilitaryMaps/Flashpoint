@@ -14,6 +14,7 @@
     <div class="flashpoint_map" id="flashpoint_map">
     </div>
     <div class="flashpoint_information" id="flashpoint_information">
+
       <div class="flashpoint_information_text">
         <div class="close_button">&times;</div>
         <div class="title"></div>
@@ -24,8 +25,7 @@
   <script type="text/javascript" src="maps/worldmapdetail_simplified.geojson"></script>
   <script type="text/javascript" src="data/conflicts_data.json"></script>
   <script type="text/javascript">
-    const debug = true;
-    screen.orientation.lock('landscape');
+    const debug = false;
 
     let conflict_regions = {};
     for (conflict in conflicts){
@@ -39,21 +39,15 @@
 
         let conflict = conflicts[conflict_regions[region.properties.id]];
 
-        layer.on("mouseover", function (e) {
-          layer.bindTooltip(conflict.title, {
-            direction: "top",
-            sticky: true,
-            closeButton: false,
-            className: "region_label",
-            opacity: 1,
-            fillOpacity: 1,
-          }).openTooltip();
+        layer.on("click", function (e) {
+          const zoom = conflict.zoom,
+                center = conflict.center;
+          flashpoint_map.setView(center, zoom);
         });
-
       };
       if (debug){
         layer.on("click", function (e) {
-            console.log(region.properties.country + ' | ' + region.properties.name + ' | ' + region.properties.id + ' | ' + e.latlng);
+            console.log(region.properties.id, region.properties.name, [e.latlng['lat'], e.latlng['lng']]);
         });
       };
 
@@ -61,16 +55,27 @@
     };
 
     function StyleConflictMap(region) {
+
         if (region.properties.id in conflict_regions){
+
+          return {
+                  className: "severity_scale_code_" + conflicts[conflict_regions[region.properties.id]].code,
+                  interactive: true
+                 }
+
+        } else{
+          if (debug){
             return {
-                    className: "severity_scale_code_" + conflicts[conflict_regions[region.properties.id]].code,
+                    className: "region_debug",
+                    interactive: true
+                   }
+          } else {
+            return {
+                    className: "region_hide",
                     interactive: false
                    }
-        } else{
-          return {
-                  className: "region_hide",
-                  interactive: false
-                 }
+          };
+
         };
     };
 
@@ -83,8 +88,8 @@
     const flashpoint_map = L.map("flashpoint_map", {
       center: [40, 0],
       maxBounds: L.latLngBounds([[-90, -180], [90, 180]]),
-      zoom: 4,
-      minZoom: 4,
+      zoom: 3.75,
+      minZoom: 3.75,
       maxZoom: 12,
       zoomControl: false,
       doubleClickZoom: true,
@@ -117,7 +122,6 @@
     for (conflict in conflicts) {
       addConflictMarker(conflicts[conflict]);
     };
-
 
   </script>
 </body>
