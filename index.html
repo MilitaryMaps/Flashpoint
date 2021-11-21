@@ -121,7 +121,7 @@
     function addConflictMarker(conflict) {
 
       let conflict_marker = new L.marker(conflict.center, { opacity: 0});
-      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, className: "conflict_label", direction: 'center', offset: [0, 0] });
+      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, opacity: 1, className: "conflict_label", direction: 'center', offset: [0, 0] });
       conflict_marker.addTo(flashpoint_map);
 
       conflict_marker.on("click", function (e) {

@@ -36,10 +36,6 @@ html, body {
 
 
 
-.flashpoint_container .flashpoint_information .close_button:hover{
-  color: rgb(255, 255, 63);
-}
-
 .flashpoint_container .flashpoint_information .flashpoint_information_text{
   min-width: 426px;
   max-width: 1080px;
@@ -52,7 +48,7 @@ html, body {
 
 .flashpoint_container .flashpoint_information .flashpoint_information_text .title{
   font-family: var(--monospace_font);
-  font-size: 4em;
+  font-size: 5em;
   line-height: 1.3em;
   margin-left: -0.05em;
   text-align: left;
@@ -64,26 +60,26 @@ html, body {
 }
 
 .flashpoint_container .flashpoint_information .flashpoint_information_text .belligerents_text{
-  font-family: var(--general_font);
+  font-family: var(--monospace_font);
   font-size: 4em;
   line-height: 1.3em;
   margin-left: -0.05em;
   text-align: left;
   width: 100%;
-  padding-top: 0.25em;
+  padding-top: 1em;
   padding-bottom: 0.25em;
 
 }
 
 
 .flashpoint_container .flashpoint_information .flashpoint_information_text .sitrep{
-  font-family: var(--general_font);
+  font-family: var(--monospace_font);
   font-size: 4em;
   line-height: 1.3em;
   margin-left: -0.05em;
   text-align: left;
   width: 100%;
-  padding-top: 0.25em;
+  padding-top: 1em;
   padding-bottom: 0.25em;
 
 }
@@ -131,21 +127,28 @@ html, body {
   max-width: 1080px;
 
   margin: 0 auto;
+  box-shadow: rgba(85, 111, 148, 0.6) 0 5px, rgba(85, 111, 148, 0.3) 0 10px, rgba(85, 111, 148, 0.2) 0 15px, rgba(85, 111, 148, 0.1) 0 20px, rgba(85, 111, 148, 0.05) 0 25px;
 }
 
 .flashpoint_container .flashpoint_information .close_button{
+
   width: 20%;
   line-height: 1.625em;
   font-family: var(--monospace_font);
   font-size: 5em;
   text-align: center;
   cursor: pointer;
-  background-color: #36393F;
+  background-color: rgba(54, 57, 63, 1);
   text-transform: uppercase;
   font-weight: bold;
 }
 
+.flashpoint_container .flashpoint_information .close_button:hover{
+  color: rgb(255, 255, 63);
+}
+
 .flashpoint_container .flashpoint_information .code{
+
   width: 40%;
   font-family: var(--monospace_font);
   font-size: 2.5em;

@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,900;1,400&display=swap');
+
+
 :root{
 
+  --general_font2: 'Source Code Pro', monospace;
+
   --severity_scale_code_green_fill_color: rgb(110, 235, 131);
-  --severity_scale_code_yellow_fill_color: rgb(255, 255, 63);
+  --severity_scale_code_yellow_fill_color: rgb(249, 220, 92);
   --severity_scale_code_orange_fill_color: rgb(244, 140, 6);
   --severity_scale_code_red_fill_color: rgb(198, 68, 15);
 
@@ -13,19 +18,22 @@
 
 
 .conflict_label {
-    position: absolute;
-    background-color: rgba(63, 75, 87, 1);
-    color: #fff;
-    font-family: var(--monospace_font);
+    font-family: var(--general_font2);
     font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+
+    background-color: rgba(54, 57, 63, 1);
+
+    position: absolute;
     padding: 1em;
     border: none;
     box-shadow: rgba(85, 111, 148, 0.6) 5px 5px, rgba(85, 111, 148, 0.3) 10px 10px, rgba(85, 111, 148, 0.2) 15px 15px, rgba(85, 111, 148, 0.1) 20px 20px, rgba(85, 111, 148, 0.05) 25px 25px;
     fill-opacity: 1;
     opacity: 1;
 
-    text-transform: uppercase;
-    font-weight: bold;
+
 }
 
 .flashpoint_map{

@@ -23,7 +23,7 @@ const conflicts = {
   },
   2:
   {
-    "code": "yellow",
+    "code": "green",
     "type": "intrastate",
     "center": [33.25132135653952, 44.32434082031251],
     "zoom": 8,
