@@ -1,32 +1,35 @@
 const conflicts = {
   0:
   {
-    "code": "red",
+    "code": "yellow",
     "type": "interstate",
     "center": [53.50805964216861, 23.643608093261722],
     "zoom": 8,
     "regions": [3150, 2344],
-    "title": "Kuznica-Bruzgi Border Crossing, Poland/Belarus",
+    "belligerents": ["Poland", "Belarus"],
+    "title": "Poland-Belarus Border Crisis",
     "description": "<p>A large group of migrants were transported to the Kuznica-Bruzgi crossing at the Polish/Belarusian border by authorities in Belarus today in what is seen as a provocative move by the Minsk government lead by Alexander Lukashenko. This event follows other similar incidences in which armed Belarusian authorities transported migrants, asylum seekers, and refugees (mainly from Iraq) to the border with the EU nation. At least 15,000 attempted border crossings were recorded last month. In response to today's events, the Polish Territorial Defense Force announced an alert in order to reinforce the Polish Border Guards currently deployed to the border. The Polish Prime Minister, Mateusz Morawiecki, has scheduled an emergency meeting in Warsaw this afternoon with government ministers to address the ongoing situation.</p><p>The Belarusian state border committee issued a statement confirming the migrants were moving along the border and accused Warsaw of taking an \"inhumane attitude\" towards them. Poland's deputy foreign minister accused Minsk of \"wanting to cause a major incident, preferably with shots fired and casualties\". A Kremlin spokesperson has offered their support for Minsk's position in a statement saying \"[Russia has] no doubts that the Belarusian authorities are taking all necessary measures to ensure the security of both Russia and Belarus in connection with the situation with migrants on the Polish-Belarusian border.\"</p>"
   },
   1:
   {
     "code": "green",
-    "type": "interstate",
-    "center": [52.012317, 4.460449],
+    "type": "intrastate",
+    "center": [53.41812635648329, -2.951889038085938],
     "zoom": 8,
-    "regions": [3485],
-    "title": "Dutch Riots",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet.</p><p>Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante. Nullam tincidunt dignissim arcu, ac pretium elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultricies eleifend luctus.</p><p>Proin tristique lacinia libero vel egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet. Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante.</p>"
+    "regions": [5668],
+    "belligerents": ["United Kingdom"],
+    "title": "Liverpool Women's Hospital Incident",
+    "description": "<p>One person is dead and another injured following a taxi explosion outside Liverpool Women's Hospital on Sunday morning. According to the BBC, the vehicle's passenger was declared dead at the scene while the driver was transported to hospital where he is listed in stable condition.</p><p>In a statement, Merseyside Chief Constable Serena Kennedy said that three men were arrested under the Terrorism Act in connection to the explosion. At the time of publishing, police were conducting an operation in south Liverpool in connection to the explosion, and had evacuated residents of the street where the operation was being conducted. Earlier on Sunday, Merseyside Police said that the incident had not been declared a terrorist incident, but that out of caution Counter Terrorism Police would lead the investigation.</p><p>In response to the incident, Merseyside Police is increasing its presence throughout the area and have advised people to be vigilant. No information has been released to indicate a continuing threat at this time.</p>"
   },
-2:
+  2:
   {
-    "code": "green",
-    "type": "interstate",
-    "center": [45.290347, 34.145508],
-    "zoom": 7,
-    "regions": [283, 5482],
-    "title": "Crimea Crisis",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet.</p><p>Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante. Nullam tincidunt dignissim arcu, ac pretium elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultricies eleifend luctus.</p><p>Proin tristique lacinia libero vel egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet. Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante.</p>"
-  },
-};
+    "code": "yellow",
+    "type": "intrastate",
+    "center": [33.25132135653952, 44.32434082031251],
+    "zoom": 8,
+    "regions": [3063],
+    "belligerents": ["Iraq", "Iran", "Asa'ib Ahl al-Haq"],
+    "title": "Baghdad Green Zone explosions incident",
+    "description": "<p>Gunfire and explosions were reported near the Green Zone in Baghdad early Sunday morning. There are unverified reports that Prime Minister Mustafa al-Kadhimi’s residence was targeted with either a rocket or a drone. There is an increased Iraqi Security Force presence now.</p><p>This occurs after two straight days of protests in Baghdad and other cities in Iraq by supporters and member of Iranian backed PMFs. During the protests there were confirmed deaths of at least two protestors, one of which was a member of Asa'ib Ahl al-Haq (AAH). The leader of AAH, Qais Khazali, vowed revenge for the deaths and threatened the PM specifically during the funeral that was held today for those killed.</p><p>The protestors are angry with the results of the recent Iraqi elections that saw government parties backed by PMFs lose a substantial number of seats. The protestors are claiming election fraud and have put in a number of complaints to the Iraqi Electoral Commission. The overwhelming winner of the the Iraqi elections was Muqtada al-Sadr and his Saairun party. It is likely that Sadr’s party will form a coalition government and that he will be the king maker for the next Iraqi government.</p>"
+  }
+}

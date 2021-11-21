@@ -14,11 +14,19 @@
     <div class="flashpoint_map" id="flashpoint_map">
     </div>
     <div class="flashpoint_information" id="flashpoint_information">
-
+      <div class="clearfix top_bar">
+        <div class="box close_button">&times;</div>
+        <div class="box code"></div>
+        <div class="box type"></div>
+      </div>
       <div class="flashpoint_information_text">
-        <div class="close_button">&times;</div>
-        <div class="title"></div>
-        <div class="description"></div>
+          <div class="title"></div>
+          <div class="belligerents_text">Belligerents</div>
+          <div class="belligerents_list"></div>
+          <div class="sitrep">Situation</div>
+          <div class="description"></div>
+          <div class="sources"></div>
+
       </div>
     </div>
   </div>
@@ -102,20 +110,36 @@
 
 
     $("#flashpoint_information .close_button").on("click", function (e) {
-        $("#flashpoint_information").css({"height": "0"});
+        $("#flashpoint_information").css({"width": "0"});
     });
-
-
+    const codes = {
+                    "green": "noteworthy",
+                    "yellow": "escalating",
+                    "orange": "dangerous",
+                    "red": "critical"
+                  }
     function addConflictMarker(conflict) {
-      let conflict_marker = L.marker(conflict.center);
+
+      let conflict_marker = new L.marker(conflict.center, { opacity: 0});
+      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, className: "conflict_label", direction: 'center', offset: [0, 0] });
       conflict_marker.addTo(flashpoint_map);
+
       conflict_marker.on("click", function (e) {
-          $("#flashpoint_information").css({"height": "100%"});
+          $("#flashpoint_information .code").css({"background-color": "var(--severity_scale_code_"+conflict.code+"_fill_color)"})
+          $("#flashpoint_information").css({"width": "100%"});
+          $("#flashpoint_information .type").html(conflict.type);
+          $("#flashpoint_information .code").html(codes[conflict.code]);
           $("#flashpoint_information .title").html(conflict.title);
           $("#flashpoint_information .description").html(conflict.description);
-          // const zoom = conflict.zoom,
-          //       center = conflict.center;
-          // flashpoint_map.setView(center, zoom);
+          let belligerent_list = "";
+          belligerent_list += "<ol>";
+          for (belligerent in conflict.belligerents){
+            belligerent_list += "<li>" + conflict.belligerents[belligerent] + "</li>";
+
+          };
+          belligerent_list += "<ol>";
+
+          $("#flashpoint_information .belligerents_list").html(belligerent_list);
       });
     };
 

@@ -11,6 +11,23 @@
   --background_color: none;
 }
 
+
+.conflict_label {
+    position: absolute;
+    background-color: rgba(63, 75, 87, 1);
+    color: #fff;
+    font-family: var(--monospace_font);
+    font-size: 1.6em;
+    padding: 1em;
+    border: none;
+    box-shadow: rgba(85, 111, 148, 0.6) 5px 5px, rgba(85, 111, 148, 0.3) 10px 10px, rgba(85, 111, 148, 0.2) 15px 15px, rgba(85, 111, 148, 0.1) 20px 20px, rgba(85, 111, 148, 0.05) 25px 25px;
+    fill-opacity: 1;
+    opacity: 1;
+
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .flashpoint_map{
   background-color: var(--background_color);
 }
