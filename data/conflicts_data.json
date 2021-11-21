@@ -1,0 +1,38 @@
+const conflicts = {
+  0:
+  {
+    "country": "Ukraine",
+    "code": "yellow",
+    "type": "interstate",
+    "center": [48.603789, 38.199463],
+    "label": false,
+    "zoom": 7,
+    "regions": [327, 329],
+    "title": "Ukraine Donbass",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet.</p><p>Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante. Nullam tincidunt dignissim arcu, ac pretium elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultricies eleifend luctus.</p><p>Proin tristique lacinia libero vel egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet. Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante.</p>"
+  },
+  1:
+  {
+    "country": "Netherlands",
+    "code": "green",
+    "type": "interstate",
+    "center": [52.012317, 4.460449],
+    "label": true,
+    "zoom": 8,
+    "regions": [3485],
+    "title": "Dutch Riots",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet.</p><p>Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante. Nullam tincidunt dignissim arcu, ac pretium elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultricies eleifend luctus.</p><p>Proin tristique lacinia libero vel egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet. Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante.</p>"
+  },
+2:
+  {
+    "country": "Ukraine",
+    "code": "green",
+    "type": "interstate",
+    "center": [45.290347, 34.145508],
+    "label": true,
+    "zoom": 7,
+    "regions": [283, 5482],
+    "title": "Crimea Crisis",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet.</p><p>Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante. Nullam tincidunt dignissim arcu, ac pretium elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ultricies eleifend luctus.</p><p>Proin tristique lacinia libero vel egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum nibh. Quisque fermentum leo arcu, sed egestas quam lacinia sit amet. Morbi sit amet tellus aliquet lectus iaculis luctus eu ac ante.</p>"
+  },
+};

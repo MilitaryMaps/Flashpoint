@@ -1,0 +1,48 @@
+:root{
+
+  --severity_scale_code_green_fill_color: green;
+  --severity_scale_code_yellow_fill_color: yellow;
+  --severity_scale_code_orange_fill_color: orange;
+  --severity_scale_code_red_fill_color: red;
+
+  --opacity: 0.8;
+  --stroke_color: black;
+  --stroke_width: 0.1em;
+  --background_color: none;
+}
+
+.flashpoint_map{
+  background-color: var(--background_color);
+}
+
+.flashpoint_map .severity_scale_code_green{
+  fill: var(--severity_scale_code_green_fill_color);
+  stroke: var(--stroke_color);
+  stroke-width: var(--stroke_width);
+  fill-opacity: var(--opacity);
+}
+
+.flashpoint_map .severity_scale_code_yellow{
+  fill: var(--severity_scale_code_yellow_fill_color);
+  stroke: var(--stroke_color);
+  stroke-width: var(--stroke_width);
+  fill-opacity: var(--opacity);
+}
+
+.flashpoint_map .severity_scale_code_orange{
+  fill: var(--severity_scale_code_orange_fill_color);
+  stroke: var(--stroke_color);
+  stroke-width: var(--stroke_width);
+  fill-opacity: var(--opacity);
+}
+
+.flashpoint_map .severity_scale_code_red{
+  fill: var(--severity_scale_code_red_fill_color);
+  stroke: var(--stroke_color);
+  stroke-width: var(--stroke_width);
+  fill-opacity: var(--opacity);
+}
+
+.flashpoint_map .region_hide{
+  display: none;
+}
