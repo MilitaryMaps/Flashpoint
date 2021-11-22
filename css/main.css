@@ -10,8 +10,8 @@ html, body {
 
 
 .global_button{
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(54, 57, 63, 1);
+  color: rgb(240, 240, 240);
+  background-color: rgba(24, 34, 36, 1);
   vertical-align: middle;
   text-align: center;
   font-family: var(--header_font);
@@ -207,6 +207,7 @@ html, body {
 
 .flashpoint_container .information_container .information_body .sources li{
   background-color: rgba(24, 34, 36, 1);
+
   padding: 0.7em;
   margin-right: 0.7em;
   margin-bottom: 0.7em;
@@ -229,6 +230,8 @@ html, body {
   min-width: 426px;
   max-width: 1080px;
   margin: 0 auto;
+  position: sticky;
+  top:0;
 
 }
 
