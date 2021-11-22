@@ -113,7 +113,7 @@
         $("#flashpoint_information").css({"width": "0"});
     });
     const codes = {
-                    "green": "noteworthy",
+                    "green": "developing",
                     "yellow": "escalating",
                     "orange": "dangerous",
                     "red": "critical"
@@ -121,8 +121,10 @@
     function addConflictMarker(conflict) {
 
       let conflict_marker = new L.marker(conflict.center, { opacity: 0});
-      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, opacity: 1, className: "conflict_label", direction: 'center', offset: [0, 0] });
+      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, opacity: 1, className: "conflict_label_"+conflict.code, direction: 'center', offset: [0, 0]});
       conflict_marker.addTo(flashpoint_map);
+
+
 
       conflict_marker.on("click", function (e) {
           $("#flashpoint_information .code").css({"background-color": "var(--severity_scale_code_"+conflict.code+"_fill_color)"})
@@ -135,7 +137,6 @@
           belligerent_list += "<ol>";
           for (belligerent in conflict.belligerents){
             belligerent_list += "<li>" + conflict.belligerents[belligerent] + "</li>";
-
           };
           belligerent_list += "<ol>";
 

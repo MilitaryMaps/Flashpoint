@@ -23,7 +23,7 @@ const conflicts = {
   },
   2:
   {
-    "code": "green",
+    "code": "orange",
     "type": "intrastate",
     "center": [33.25132135653952, 44.32434082031251],
     "zoom": 8,
@@ -31,5 +31,16 @@ const conflicts = {
     "belligerents": ["Iraq", "Iran", "Asa'ib Ahl al-Haq"],
     "title": "Baghdad Green Zone explosions incident",
     "description": "<p>Gunfire and explosions were reported near the Green Zone in Baghdad early Sunday morning. There are unverified reports that Prime Minister Mustafa al-Kadhimi’s residence was targeted with either a rocket or a drone. There is an increased Iraqi Security Force presence now.</p><p>This occurs after two straight days of protests in Baghdad and other cities in Iraq by supporters and member of Iranian backed PMFs. During the protests there were confirmed deaths of at least two protestors, one of which was a member of Asa'ib Ahl al-Haq (AAH). The leader of AAH, Qais Khazali, vowed revenge for the deaths and threatened the PM specifically during the funeral that was held today for those killed.</p><p>The protestors are angry with the results of the recent Iraqi elections that saw government parties backed by PMFs lose a substantial number of seats. The protestors are claiming election fraud and have put in a number of complaints to the Iraqi Electoral Commission. The overwhelming winner of the the Iraqi elections was Muqtada al-Sadr and his Saairun party. It is likely that Sadr’s party will form a coalition government and that he will be the king maker for the next Iraqi government.</p>"
+  },
+  3:
+  {
+    "code": "red",
+    "type": "intrastate",
+    "center": [43.01042149801144, -88.23326110839845],
+    "zoom": 8,
+    "regions": [3553],
+    "belligerents": ["United States of America"],
+    "title": "Car Incident Waukesha",
+    "description": "<p>A car plowed into a crowd at the Waukesha Christmas Parade on Sunday evening,  shortly before 5 p.m. local time (11 p.m. GMT). Following the incident, authorities declared a mass casualty incident, with police radio traffic stating at least 30 individuals injured.</p><p>Videos from the scene showed a red SUV breaking through road barriers before continuing along the parade route. Police reports indicate that one occupant the vehicle was arrested, with a search ongoing for two occupants who remain at large.</p><p>Official details remain extremely limited at this time, however the Project Owl team will continue to bring the latest details.</p>"
   }
 }

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,900;1,400&display=swap');
+
 
 
 :root{
 
-  --general_font2: 'Source Code Pro', monospace;
+
 
   --severity_scale_code_green_fill_color: rgb(110, 235, 131);
   --severity_scale_code_yellow_fill_color: rgb(249, 220, 92);
@@ -14,26 +14,91 @@
   --stroke_color: #a09daf;
   --stroke_width: 0.2em;
   --background_color: none;
+
+  --severity_scale_code_green_fill_color_step_1: rgba(110, 235, 131, 1);
+  --severity_scale_code_green_fill_color_step_2: rgba(110, 235, 131, 0.5);
+  --severity_scale_code_green_fill_color_step_3: rgba(110, 235, 131, 0.2);
+  --severity_scale_code_green_fill_color_step_4: rgba(110, 235, 131, 0.1);
+  --severity_scale_code_green_fill_color_step_5: rgba(110, 235, 131, 0.05);
+
+  --severity_scale_code_yellow_fill_color_step_1: rgba(249, 220, 92, 1);
+  --severity_scale_code_yellow_fill_color_step_2: rgba(249, 220, 92, 0.5);
+  --severity_scale_code_yellow_fill_color_step_3: rgba(249, 220, 92, 0.2);
+  --severity_scale_code_yellow_fill_color_step_4: rgba(249, 220, 92, 0.1);
+  --severity_scale_code_yellow_fill_color_step_5: rgba(249, 220, 92, 0.05);
+
+  --severity_scale_code_orange_fill_color_step_1: rgba(244, 140, 6, 1);
+  --severity_scale_code_orange_fill_color_step_2: rgba(244, 140, 6, 0.5);
+  --severity_scale_code_orange_fill_color_step_3: rgba(244, 140, 6, 0.2);
+  --severity_scale_code_orange_fill_color_step_4: rgba(244, 140, 6, 0.1);
+  --severity_scale_code_orange_fill_color_step_5: rgba(244, 140, 6, 0.05);
+
+  --severity_scale_code_red_fill_color_step_1: rgba(198, 68, 15, 1);
+  --severity_scale_code_red_fill_color_step_2: rgba(198, 68, 15, 0.5);
+  --severity_scale_code_red_fill_color_step_3: rgba(198, 68, 15, 0.2);
+  --severity_scale_code_red_fill_color_step_4: rgba(198, 68, 15, 0.1);
+  --severity_scale_code_red_fill_color_step_5: rgba(198, 68, 15, 0.05);
 }
 
 
-.conflict_label {
-    font-family: var(--general_font2);
+.conflict_label_green {
+    font-family: var(--monospace_font);
     font-size: 1.6em;
     text-transform: uppercase;
     font-weight: 900;
     color: rgba(255, 255, 255, 1);
-
     background-color: rgba(54, 57, 63, 1);
-
     position: absolute;
     padding: 1em;
     border: none;
-    box-shadow: rgba(85, 111, 148, 0.6) 5px 5px, rgba(85, 111, 148, 0.3) 10px 10px, rgba(85, 111, 148, 0.2) 15px 15px, rgba(85, 111, 148, 0.1) 20px 20px, rgba(85, 111, 148, 0.05) 25px 25px;
+    box-shadow: var(--severity_scale_code_green_fill_color_step_1) 5px 5px,var(--severity_scale_code_green_fill_color_step_2) 10px 10px, var(--severity_scale_code_green_fill_color_step_3) 15px 15px, var(--severity_scale_code_green_fill_color_step_4) 20px 20px, var(--severity_scale_code_green_fill_color_step_5) 25px 25px;
     fill-opacity: 1;
     opacity: 1;
+}
 
+.conflict_label_yellow {
+    font-family: var(--monospace_font);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(54, 57, 63, 1);
+    position: absolute;
+    padding: 1em;
+    border: none;
+    box-shadow: var(--severity_scale_code_yellow_fill_color_step_1) 5px 5px,var(--severity_scale_code_yellow_fill_color_step_2) 10px 10px, var(--severity_scale_code_yellow_fill_color_step_3) 15px 15px, var(--severity_scale_code_yellow_fill_color_step_4) 20px 20px, var(--severity_scale_code_yellow_fill_color_step_5) 25px 25px;
+    fill-opacity: 1;
+    opacity: 1;
+}
 
+.conflict_label_orange {
+    font-family: var(--monospace_font);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(54, 57, 63, 1);
+    position: absolute;
+    padding: 1em;
+    border: none;
+    box-shadow: var(--severity_scale_code_orange_fill_color_step_1) 5px 5px,var(--severity_scale_code_orange_fill_color_step_2) 10px 10px, var(--severity_scale_code_orange_fill_color_step_3) 15px 15px, var(--severity_scale_code_orange_fill_color_step_4) 20px 20px, var(--severity_scale_code_orange_fill_color_step_5) 25px 25px;
+    fill-opacity: 1;
+    opacity: 1;
+}
+
+.conflict_label_red {
+    font-family: var(--monospace_font);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(54, 57, 63, 1);
+    position: absolute;
+    padding: 1em;
+    border: none;
+    box-shadow: var(--severity_scale_code_red_fill_color_step_1) 5px 5px,var(--severity_scale_code_red_fill_color_step_2) 10px 10px, var(--severity_scale_code_red_fill_color_step_3) 15px 15px, var(--severity_scale_code_red_fill_color_step_4) 20px 20px, var(--severity_scale_code_red_fill_color_step_5) 25px 25px;
+    fill-opacity: 1;
+    opacity: 1;
 }
 
 .flashpoint_map{
