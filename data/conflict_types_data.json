@@ -1,0 +1,6 @@
+const conflict_types = {
+                "green": "Stable",
+                "yellow": "Tentative",
+                "orange": "Dangerous",
+                "red": "Critical"
+              }

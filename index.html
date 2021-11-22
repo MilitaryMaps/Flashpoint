@@ -2,6 +2,7 @@
 
 <html lang="en">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
@@ -14,25 +15,32 @@
   <div class="flashpoint_container">
     <div class="flashpoint_map" id="flashpoint_map">
     </div>
-    <div class="flashpoint_information" id="flashpoint_information">
+
+
+    <div class="information_container">
       <div class="clearfix top_bar">
+        <div class="box severity_scale_status"></div>
+        <div class="box conflict_type"></div>
         <div class="box close_button">&times;</div>
-        <div class="box code"></div>
-        <div class="box type"></div>
       </div>
-      <div class="flashpoint_information_text">
+
+      <div class="information_body">
           <div class="title"></div>
-          <div class="belligerents_text">Belligerents</div>
-          <div class="belligerents_list"></div>
-          <div class="sitrep">Situation</div>
-          <div class="description"></div>
+          <div class="belligerents_title">Belligerents</div>
+          <div class="belligerents"></div>
+          <div class="situation_summary_title">Summary</div>
+          <div class="situation_summary"></div>
+          <div class="situation_reports_title">Situation reports</div>
+          <div class="situation_reports"></div>
+          <div class="sources_title">Sources</div>
           <div class="sources"></div>
       </div>
     </div>
+
   </div>
   <script type="text/javascript" src="maps/admin1.geojson"></script>
   <script type="text/javascript" src="data/conflicts_data.json"></script>
-  <script type="text/javascript" src="data/codes_data.json"></script>
+  <script type="text/javascript" src="data/conflict_types_data.json"></script>
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
@@ -55,6 +63,8 @@
     if (debug) {
       conflict_regions_features = world_map_detail;
     };
+
+
     // Loading the basemap and conflict features
     const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/rickthesaxon/ckwaqi31o1gqm15od9hbn5xj2/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicmlja3RoZXNheG9uIiwiYSI6ImNrd2FxZmhsYjNjeXcybnJvdmF0YTlrN3oifQ.HBaSH6YQo3tx-6ZUvy5y_g"),
           ConflictMap = L.geoJson(conflict_regions_features, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
@@ -77,8 +87,8 @@
 
 
     // Button functions
-    $("#flashpoint_information .close_button").on("click", function (e) {
-        $("#flashpoint_information").css({"width": "0"});
+    $(".information_container .close_button").on("click", function (e) {
+        $(".information_container").css({"width": "0"});
     });
     $(".global_button").on("click", function (e) {
         flashpoint_map.flyTo([40, 0], 3.75, {animate: true, duration: 1.0});

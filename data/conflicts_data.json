@@ -1,46 +1,70 @@
 const conflicts = {
   0:
   {
-    "code": "yellow",
-    "type": "interstate",
+    "severity_scale_status": "yellow",
+    "conflict_type": "interstate",
     "center": [53.50805964216861, 23.643608093261722],
     "zoom": 8,
     "regions": [3150, 2344],
     "belligerents": ["Poland", "Belarus"],
     "title": "Poland-Belarus Border Crisis",
-    "description": "<p>A large group of migrants were transported to the Kuznica-Bruzgi crossing at the Polish/Belarusian border by authorities in Belarus today in what is seen as a provocative move by the Minsk government lead by Alexander Lukashenko. This event follows other similar incidences in which armed Belarusian authorities transported migrants, asylum seekers, and refugees (mainly from Iraq) to the border with the EU nation. At least 15,000 attempted border crossings were recorded last month. In response to today's events, the Polish Territorial Defense Force announced an alert in order to reinforce the Polish Border Guards currently deployed to the border. The Polish Prime Minister, Mateusz Morawiecki, has scheduled an emergency meeting in Warsaw this afternoon with government ministers to address the ongoing situation.</p><p>The Belarusian state border committee issued a statement confirming the migrants were moving along the border and accused Warsaw of taking an \"inhumane attitude\" towards them. Poland's deputy foreign minister accused Minsk of \"wanting to cause a major incident, preferably with shots fired and casualties\". A Kremlin spokesperson has offered their support for Minsk's position in a statement saying \"[Russia has] no doubts that the Belarusian authorities are taking all necessary measures to ensure the security of both Russia and Belarus in connection with the situation with migrants on the Polish-Belarusian border.\"</p>"
+    "situation_summary": "",
+    "situation_reports": [
+      "<p><b>22-11-2021</b><br><p>A large group of migrants were transported to the Kuznica-Bruzgi crossing at the Polish/Belarusian border by authorities in Belarus today in what is seen as a provocative move by the Minsk government lead by Alexander Lukashenko. This event follows other similar incidences in which armed Belarusian authorities transported migrants, asylum seekers, and refugees (mainly from Iraq) to the border with the EU nation. At least 15,000 attempted border crossings were recorded last month. In response to today's events, the Polish Territorial Defense Force announced an alert in order to reinforce the Polish Border Guards currently deployed to the border. The Polish Prime Minister, Mateusz Morawiecki, has scheduled an emergency meeting in Warsaw this afternoon with government ministers to address the ongoing situation.</p><p>The Belarusian state border committee issued a statement confirming the migrants were moving along the border and accused Warsaw of taking an \"inhumane attitude\" towards them. Poland's deputy foreign minister accused Minsk of \"wanting to cause a major incident, preferably with shots fired and casualties\". A Kremlin spokesperson has offered their support for Minsk's position in a statement saying \"[Russia has] no doubts that the Belarusian authorities are taking all necessary measures to ensure the security of both Russia and Belarus in connection with the situation with migrants on the Polish-Belarusian border.\"</p>"
+    ],
+    "sources": []
   },
   1:
   {
-    "code": "green",
-    "type": "intrastate",
+    "severity_scale_status": "green",
+    "conflict_type": "intrastate",
     "center": [53.41812635648329, -2.951889038085938],
     "zoom": 12,
     "regions": [5668],
     "belligerents": ["United Kingdom"],
     "title": "Liverpool Women's Hospital Incident",
-    "description": "<p>One person is dead and another injured following a taxi explosion outside Liverpool Women's Hospital on Sunday morning. According to the BBC, the vehicle's passenger was declared dead at the scene while the driver was transported to hospital where he is listed in stable condition.</p><p>In a statement, Merseyside Chief Constable Serena Kennedy said that three men were arrested under the Terrorism Act in connection to the explosion. At the time of publishing, police were conducting an operation in south Liverpool in connection to the explosion, and had evacuated residents of the street where the operation was being conducted. Earlier on Sunday, Merseyside Police said that the incident had not been declared a terrorist incident, but that out of caution Counter Terrorism Police would lead the investigation.</p><p>In response to the incident, Merseyside Police is increasing its presence throughout the area and have advised people to be vigilant. No information has been released to indicate a continuing threat at this time.</p>"
+    "situation_summary": "",
+    "situation_reports": [
+      "<p>One person is dead and another injured following a taxi explosion outside Liverpool Women's Hospital on Sunday morning. According to the BBC, the vehicle's passenger was declared dead at the scene while the driver was transported to hospital where he is listed in stable condition.</p><p>In a statement, Merseyside Chief Constable Serena Kennedy said that three men were arrested under the Terrorism Act in connection to the explosion. At the time of publishing, police were conducting an operation in south Liverpool in connection to the explosion, and had evacuated residents of the street where the operation was being conducted. Earlier on Sunday, Merseyside Police said that the incident had not been declared a terrorist incident, but that out of caution Counter Terrorism Police would lead the investigation.</p><p>In response to the incident, Merseyside Police is increasing its presence throughout the area and have advised people to be vigilant. No information has been released to indicate a continuing threat at this time.</p>"
+    ],
+    "sources": [],
   },
   2:
   {
-    "code": "orange",
-    "type": "intrastate",
+    "severity_scale_status": "orange",
+    "conflict_type": "intrastate",
     "center": [33.25132135653952, 44.32434082031251],
     "zoom": 10,
     "regions": [3063],
     "belligerents": ["Iraq", "Iran", "Asa'ib Ahl al-Haq"],
     "title": "Baghdad Green Zone explosions incident",
-    "description": "<p>Gunfire and explosions were reported near the Green Zone in Baghdad early Sunday morning. There are unverified reports that Prime Minister Mustafa al-Kadhimi’s residence was targeted with either a rocket or a drone. There is an increased Iraqi Security Force presence now.</p><p>This occurs after two straight days of protests in Baghdad and other cities in Iraq by supporters and member of Iranian backed PMFs. During the protests there were confirmed deaths of at least two protestors, one of which was a member of Asa'ib Ahl al-Haq (AAH). The leader of AAH, Qais Khazali, vowed revenge for the deaths and threatened the PM specifically during the funeral that was held today for those killed.</p><p>The protestors are angry with the results of the recent Iraqi elections that saw government parties backed by PMFs lose a substantial number of seats. The protestors are claiming election fraud and have put in a number of complaints to the Iraqi Electoral Commission. The overwhelming winner of the the Iraqi elections was Muqtada al-Sadr and his Saairun party. It is likely that Sadr’s party will form a coalition government and that he will be the king maker for the next Iraqi government.</p>"
+    "situation_summary": "",
+    "situation_reports": [
+      "<p>Gunfire and explosions were reported near the Green Zone in Baghdad early Sunday morning. There are unverified reports that Prime Minister Mustafa al-Kadhimi’s residence was targeted with either a rocket or a drone. There is an increased Iraqi Security Force presence now.</p><p>This occurs after two straight days of protests in Baghdad and other cities in Iraq by supporters and member of Iranian backed PMFs. During the protests there were confirmed deaths of at least two protestors, one of which was a member of Asa'ib Ahl al-Haq (AAH). The leader of AAH, Qais Khazali, vowed revenge for the deaths and threatened the PM specifically during the funeral that was held today for those killed.</p><p>The protestors are angry with the results of the recent Iraqi elections that saw government parties backed by PMFs lose a substantial number of seats. The protestors are claiming election fraud and have put in a number of complaints to the Iraqi Electoral Commission. The overwhelming winner of the the Iraqi elections was Muqtada al-Sadr and his Saairun party. It is likely that Sadr’s party will form a coalition government and that he will be the king maker for the next Iraqi government.</p>"
+    ],
+    "sources": []
   },
   3:
   {
-    "code": "red",
-    "type": "intrastate",
+    "severity_scale_status": "red",
+    "conflict_type": "intrastate",
     "center": [43.01042149801144, -88.23326110839845],
     "zoom": 12,
     "regions": [3553],
     "belligerents": ["United States of America"],
     "title": "Waukesha christmas parade incident",
-    "description": "<p>A car plowed into a crowd at the Waukesha Christmas Parade on Sunday evening,  shortly before 5 p.m. local time (11 p.m. GMT). Following the incident, authorities declared a mass casualty incident, with police radio traffic stating at least 30 individuals injured.</p><p>Videos from the scene showed a red SUV breaking through road barriers before continuing along the parade route. Police reports indicate that one occupant the vehicle was arrested, with a search ongoing for two occupants who remain at large.</p><p>Official details remain extremely limited at this time, however the Project Owl team will continue to bring the latest details.</p>"
+    "situation_summary": "<p>At least five people have been killed and more than 40 injured after a car ploughed into a Christmas parade in the US state of Wisconsin, police say.</p><p>School bands and a dance troupe of grannies were among those marching through the city of Waukesha when a red SUV came speeding down the road.</p><p>It hit dozens of people, including children.</p><p>One person is in custody. The incident does not appear \"at this time\" to be an act of terrorism, one official said.</p>",
+    "situation_reports": [
+      "<p><b>2021-11-22<br>Waukesha, Wisconsin, United States</b></p><p>Authorities confirmed Sunday evening that at least 23 victims, including 12 adults and 11 children, were transported to local hospitals following an incident involving a car driving through a Christmas parade. Waukesha Fire Chief Steven Howard said that in addition to the Waukesha Fire Department, 12 additional agencies responded to the incident. He also confirmed that several fatalities occurred, however precise numbers were not provided.</p><p>Chief Daniel Thompson of the Waukesha Police Department told reporters that a person of interest was in custody, and reiterated that the public is not in any danger. Thompson confirmed that his department is receiving assistance from other law enforcement agencies, including federal resources.</p>",
+      "<p><b>2021-11-21<br>Waukesha, Wisconsin, USA</b></p><p>A car plowed into a crowd at the Waukesha Christmas Parade on Sunday evening,  shortly before 5 p.m. local time (11 p.m. GMT). Following the incident, authorities declared a mass casualty incident, with police radio traffic stating at least 30 individuals injured.</p><p>Videos from the scene showed a red SUV breaking through road barriers before continuing along the parade route. Police reports indicate that one occupant the vehicle was arrested, with a search ongoing for two occupants who remain at large.</p><p>Official details remain extremely limited at this time, however the Project Owl team will continue to bring the latest details.</p>"
+
+    ],
+    "sources": [
+      "https://www.jsonline.com/story/communities/waukesha/news/2021/11/21/waukesha-christmas-parade-car-rams-through-downtown-shots-fired-people-injured/8714041002/",
+      "https://www.wkow.com/news/state/many-injured-after-car-crashes-into-waukesha-christmas-parade/article_a674b76e-4b21-11ec-8e7a-8f208e9855df.html",
+      "https://twitter.com/WaukeshaAlerts/status/1462555850388738050",
+      "https://twitter.com/KayleeStaral/status/1462551691392270337",
+      "https://twitter.com/SamKraemerTV/status/1462602021886963712"
+    ]
   }
 }

@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 :root {
-  --general_font: 'Open Sans', sans-serif;
-  --header_font: 'Poppins', sans-serif;
+  --general_font: 'Rubik', sans-serif;
   --monospace_font: 'Courier Prime', monospace;
 
-  --flashpoint_information_background: #3F4B57;
+  --information_container_background: rgb(23, 24, 26);
 }
