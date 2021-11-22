@@ -50,7 +50,7 @@
         layer.on("click", function (e) {
           const zoom = conflict.zoom,
                 center = conflict.center;
-          flashpoint_map.setView(center, zoom);
+        flashpoint_map.flyTo(center, zoom, {animate: true, duration: 1.0});
         });
       };
       if (debug){
@@ -144,7 +144,7 @@
 
           const zoom = conflict.zoom,
                 center = conflict.center;
-          flashpoint_map.setView(center, zoom);
+          flashpoint_map.flyTo(center, zoom, {animate: true, duration: 1.0});
       });
     };
 
