@@ -35,12 +35,22 @@
   <script type="text/javascript">
     const debug = false;
 
-    let conflict_regions = {};
+    const conflict_regions = {};
     for (conflict in conflicts){
       for (region in conflicts[conflict].regions){
         conflict_regions[conflicts[conflict].regions[region]] =  conflict;
       };
     };
+
+    let conflict_regions_features = {
+        "type":"FeatureCollection", "features": []
+    };
+    for (feature in world_map_detail['features']){
+      if (world_map_detail['features'][feature].properties.id in conflict_regions){
+          conflict_regions_features.features.push(world_map_detail['features'][feature]);
+      }
+    }
+
 
     function FeaturesConflictMap(region, layer) {
       if (region.properties.id in conflict_regions){
@@ -90,7 +100,7 @@
     // Loading the two GeoJSON maps.
 
     const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/paddowonderland/ckw9fqnzy07c715odzos11gmi/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGFkZG93b25kZXJsYW5kIiwiYSI6ImNrN3J6NWp3MjBiMzkzb21yeXp2b2FubjEifQ.EY3uhB3fvOcmpHBcFMfajw"),
-          ConflictMap = L.geoJson(world_map_detail, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
+          ConflictMap = L.geoJson(conflict_regions_features, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
 
     // Initiating Leaflet map
     const flashpoint_map = L.map("flashpoint_map", {
