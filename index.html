@@ -90,12 +90,12 @@
     // Loading the two GeoJSON maps.
 
     const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/paddowonderland/ckw9fqnzy07c715odzos11gmi/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGFkZG93b25kZXJsYW5kIiwiYSI6ImNrN3J6NWp3MjBiMzkzb21yeXp2b2FubjEifQ.EY3uhB3fvOcmpHBcFMfajw"),
-          ConflictMap = L.geoJson(world_map_detail, {noWrap: true, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
+          ConflictMap = L.geoJson(world_map_detail, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
 
     // Initiating Leaflet map
     const flashpoint_map = L.map("flashpoint_map", {
       center: [40, 0],
-      maxBounds: L.latLngBounds([[-90, -180], [90, 180]]),
+      worldCopyJump: true,
       zoom: 3.75,
       minZoom: 3.75,
       maxZoom: 12,
@@ -133,14 +133,18 @@
           $("#flashpoint_information .code").html(codes[conflict.code]);
           $("#flashpoint_information .title").html(conflict.title);
           $("#flashpoint_information .description").html(conflict.description);
+
           let belligerent_list = "";
           belligerent_list += "<ol>";
           for (belligerent in conflict.belligerents){
             belligerent_list += "<li>" + conflict.belligerents[belligerent] + "</li>";
           };
           belligerent_list += "<ol>";
-
           $("#flashpoint_information .belligerents_list").html(belligerent_list);
+
+          const zoom = conflict.zoom,
+                center = conflict.center;
+          flashpoint_map.setView(center, zoom);
       });
     };
 
