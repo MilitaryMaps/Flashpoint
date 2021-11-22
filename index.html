@@ -10,6 +10,7 @@
   <title>Flashpoint</title>
 </head>
 <body>
+  <div class="global_button"><i class="fas fa-globe-europe"></i></div>
   <div class="flashpoint_container">
     <div class="flashpoint_map" id="flashpoint_map">
     </div>
@@ -26,22 +27,23 @@
           <div class="sitrep">Situation</div>
           <div class="description"></div>
           <div class="sources"></div>
-
       </div>
     </div>
   </div>
   <script type="text/javascript" src="maps/worldmapdetail.json"></script>
   <script type="text/javascript" src="data/conflicts_data.json"></script>
+  <script type="text/javascript" src="data/codes_data.json"></script>
+  <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
 
+    // Extracting only what we need, for performance purposes
     const conflict_regions = {};
     for (conflict in conflicts){
       for (region in conflicts[conflict].regions){
         conflict_regions[conflicts[conflict].regions[region]] =  conflict;
       };
     };
-
     let conflict_regions_features = {
         "type":"FeatureCollection", "features": []
     };
@@ -50,56 +52,11 @@
           conflict_regions_features.features.push(world_map_detail['features'][feature]);
       }
     }
-
-
-    function FeaturesConflictMap(region, layer) {
-      if (region.properties.id in conflict_regions){
-
-        let conflict = conflicts[conflict_regions[region.properties.id]];
-
-        layer.on("click", function (e) {
-          const zoom = conflict.zoom,
-                center = conflict.center;
-        flashpoint_map.flyTo(center, zoom, {animate: true, duration: 1.0});
-        });
-      };
-      if (debug){
-        layer.on("click", function (e) {
-            console.log(region.properties.id, region.properties.name, [e.latlng['lat'], e.latlng['lng']]);
-        });
-      };
-
-
+    if (debug) {
+      conflict_regions_features = world_map_detail;
     };
-
-    function StyleConflictMap(region) {
-
-        if (region.properties.id in conflict_regions){
-
-          return {
-                  className: "severity_scale_code_" + conflicts[conflict_regions[region.properties.id]].code,
-                  interactive: true
-                 }
-
-        } else{
-          if (debug){
-            return {
-                    className: "region_debug",
-                    interactive: true
-                   }
-          } else {
-            return {
-                    className: "region_hide",
-                    interactive: false
-                   }
-          };
-
-        };
-    };
-
-    // Loading the two GeoJSON maps.
-
-    const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/paddowonderland/ckw9fqnzy07c715odzos11gmi/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGFkZG93b25kZXJsYW5kIiwiYSI6ImNrN3J6NWp3MjBiMzkzb21yeXp2b2FubjEifQ.EY3uhB3fvOcmpHBcFMfajw"),
+    // Loading the basemap and conflict features
+    const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/rickthesaxon/ckwaqi31o1gqm15od9hbn5xj2/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicmlja3RoZXNheG9uIiwiYSI6ImNrd2FxZmhsYjNjeXcybnJvdmF0YTlrN3oifQ.HBaSH6YQo3tx-6ZUvy5y_g"),
           ConflictMap = L.geoJson(conflict_regions_features, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
 
     // Initiating Leaflet map
@@ -119,45 +76,15 @@
     });
 
 
+    // Button functions
     $("#flashpoint_information .close_button").on("click", function (e) {
         $("#flashpoint_information").css({"width": "0"});
     });
-    const codes = {
-                    "green": "developing",
-                    "yellow": "escalating",
-                    "orange": "dangerous",
-                    "red": "critical"
-                  }
-    function addConflictMarker(conflict) {
+    $(".global_button").on("click", function (e) {
+        flashpoint_map.flyTo([40, 0], 3.75, {animate: true, duration: 1.0});
+    });
 
-      let conflict_marker = new L.marker(conflict.center, { opacity: 0});
-      conflict_marker.bindTooltip(conflict.title, {permanent: true, interactive: true, opacity: 1, className: "conflict_label_"+conflict.code, direction: 'center', offset: [0, 0]});
-      conflict_marker.addTo(flashpoint_map);
-
-
-
-      conflict_marker.on("click", function (e) {
-          $("#flashpoint_information .code").css({"background-color": "var(--severity_scale_code_"+conflict.code+"_fill_color)"})
-          $("#flashpoint_information").css({"width": "100%"});
-          $("#flashpoint_information .type").html(conflict.type);
-          $("#flashpoint_information .code").html(codes[conflict.code]);
-          $("#flashpoint_information .title").html(conflict.title);
-          $("#flashpoint_information .description").html(conflict.description);
-
-          let belligerent_list = "";
-          belligerent_list += "<ol>";
-          for (belligerent in conflict.belligerents){
-            belligerent_list += "<li>" + conflict.belligerents[belligerent] + "</li>";
-          };
-          belligerent_list += "<ol>";
-          $("#flashpoint_information .belligerents_list").html(belligerent_list);
-
-          const zoom = conflict.zoom,
-                center = conflict.center;
-          flashpoint_map.flyTo(center, zoom, {animate: true, duration: 1.0});
-      });
-    };
-
+    // Add a text marker for each conflict
     for (conflict in conflicts) {
       addConflictMarker(conflicts[conflict]);
     };

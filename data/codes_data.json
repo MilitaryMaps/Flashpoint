@@ -1,0 +1,6 @@
+const codes = {
+                "green": "Stable",
+                "yellow": "Tentative",
+                "orange": "Dangerous",
+                "red": "Critical"
+              }

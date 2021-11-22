@@ -8,6 +8,30 @@ html, body {
    width: 100%;
 }
 
+
+.global_button{
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(54, 57, 63, 1);
+  vertical-align: middle;
+  text-align: center;
+  font-family: var(--header_font);
+  font-weight: 600;
+  position: absolute;
+  top: 0r;
+  z-index: 3;
+
+
+  font-size: 4rem;
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  cursor: pointer;
+
+}
+.global_button:hover{
+  opacity: 1
+}
+
 .flashpoint_container .flashpoint_map {
   position: absolute;
   top: 0;
@@ -18,9 +42,9 @@ html, body {
 
 .flashpoint_container .flashpoint_information{
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 0;
+  top: 0;
+  left: 0;
+  width: 0%;
   height: 100%;
   display: block;
   background-color: var(--flashpoint_information_background);
@@ -32,8 +56,6 @@ html, body {
   margin: 0;
   overflow-y: auto;
 }
-
-
 
 
 .flashpoint_container .flashpoint_information .flashpoint_information_text{
@@ -125,10 +147,9 @@ html, body {
 .flashpoint_container .flashpoint_information .top_bar{
   min-width: 426px;
   max-width: 1080px;
-
   margin: 0 auto;
-  box-shadow: rgba(85, 111, 148, 0.6) 0 5px, rgba(85, 111, 148, 0.3) 0 10px, rgba(85, 111, 148, 0.2) 0 15px, rgba(85, 111, 148, 0.1) 0 20px, rgba(85, 111, 148, 0.05) 0 25px;
 }
+
 
 .flashpoint_container .flashpoint_information .close_button{
 
