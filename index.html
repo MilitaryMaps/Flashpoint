@@ -44,10 +44,13 @@
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
+    let   conflicts = {};
 
     $.getJSON('data/data.json', function(data) {
-        const conflicts = data;
+        conflicts = data;
     });
+
+    console.log(conflicts)
 
     let conflict_regions_features = {
          "type":"FeatureCollection", "features": []
