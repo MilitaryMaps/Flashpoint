@@ -46,22 +46,10 @@ function addConflictMarker(conflict) {
 
 // Functions for each feature on the map
 function FeaturesConflictMap(region, layer) {
-  if (region.properties.id in conflict_regions){
-    let conflict = conflicts[conflict_regions[region.properties.id]];
-
-    // Onclick fly to zoom function for each feature
-    // Data for zoom and center derived from the conflicts dataset
-    layer.on("click", function (e) {
-      const zoom = conflict.zoom,
-            center = conflict.center;
-    flashpoint_map.flyTo(center, zoom, {animate: true, duration: 1.0});
-    });
-
-  };
-
   if (debug){
     layer.on("click", function (e) {
         console.log(region.properties.id, region.properties.name, [e.latlng['lat'], e.latlng['lng']]);
+        console.log(region);
     });
   };
 
@@ -70,18 +58,29 @@ function FeaturesConflictMap(region, layer) {
 
 // Giving custom styling to each feature on the map
 function StyleConflictMap(region) {
-    if (region.properties.id in conflict_regions){
-      return {
-              className: "severity_scale_status_" + conflicts[conflict_regions[region.properties.id]].severity_scale_status, // Class based on the code on the severity scale, derived from conflicts dataset
-              interactive: false // Currently disabled, which makes the onclick fly to function in FeaturesConflictMap() useless.
-             }
-    } else{
-      if (debug){
-        // Give every region a custom styling - only available in debug mode
-        return {
-                className: "region_debug",
-                interactive: true
-               }
-      }
+    for (conflict in conflicts){
+      if (conflicts[conflict].region_features.includes(region)){
+        let severity_scale_status = conflicts[conflict].severity_scale_status;
+
+        if (debug){
+          return {
+                  className: "severity_scale_status_" + severity_scale_status, // Class based on the code on the severity scale, derived from conflicts dataset
+                  interactive: true // Currently disabled, which makes the onclick fly to function in FeaturesConflictMap() useless.
+                 }
+        } else {
+          return {
+                  className: "severity_scale_status_" + severity_scale_status, // Class based on the code on the severity scale, derived from conflicts dataset
+                  interactive: false // Currently disabled, which makes the onclick fly to function in FeaturesConflictMap() useless.
+                 }
+        };
+      } else {
+        if (debug){
+          // Give every region a custom styling - only available in debug mode
+          return {
+                  className: "region_debug",
+                  interactive: true
+                 }
+        }
+      };
     };
 };

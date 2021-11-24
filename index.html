@@ -38,35 +38,29 @@
     </div>
 
   </div>
-  <script type="text/javascript" src="maps/admin1.geojson"></script>
+  <!-- <script type="text/javascript" src="maps/admin1.geojson"></script> -->
   <script type="text/javascript" src="data/conflicts_data.json"></script>
   <script type="text/javascript" src="data/conflict_types_data.json"></script>
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
 
-    // Extracting only what we need, for performance purposes
-    const conflict_regions = {};
-    for (conflict in conflicts){
-      for (region in conflicts[conflict].regions){
-        conflict_regions[conflicts[conflict].regions[region]] =  conflict;
-      };
-    };
     let conflict_regions_features = {
-        "type":"FeatureCollection", "features": []
-    };
-    for (feature in world_map_detail['features']){
-      if (world_map_detail['features'][feature].properties.id in conflict_regions){
-          conflict_regions_features.features.push(world_map_detail['features'][feature]);
+         "type":"FeatureCollection", "features": []
+     };
+    for (conflict in conflicts){
+      for (feature in conflicts[conflict].region_features){
+        conflict_regions_features.features.push(conflicts[conflict].region_features[feature]);
       }
-    }
+    };
+
     if (debug) {
       conflict_regions_features = world_map_detail;
     };
 
 
     // Loading the basemap and conflict features
-    const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/rickthesaxon/ckwaqi31o1gqm15od9hbn5xj2/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicmlja3RoZXNheG9uIiwiYSI6ImNrd2FxZmhsYjNjeXcybnJvdmF0YTlrN3oifQ.HBaSH6YQo3tx-6ZUvy5y_g"),
+    const BaseMap = L.tileLayer("https://api.mapbox.com/styles/v1/rickthesaxon/ckwaqi31o1gqm15od9hbn5xj2/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicmlja3RoZXNheG9uIiwiYSI6ImNrd2FxZmhsYjNjeXcybnJvdmF0YTlrN3oifQ.HBaSH6YQo3tx-6ZUvy5y_g"),
           ConflictMap = L.geoJson(conflict_regions_features, {noWrap: false, onEachFeature: FeaturesConflictMap, style: StyleConflictMap});
 
     // Initiating Leaflet map
