@@ -45,6 +45,10 @@
   <script type="text/javascript">
     const debug = false;
 
+    $.getJSON("data/data.json", function(json) {
+      console.log(json); // this will show the info it in firebug console
+    });
+
     let conflict_regions_features = {
          "type":"FeatureCollection", "features": []
      };

@@ -67,7 +67,7 @@ html, body {
   max-width: 1080px;
 
   margin: 0 auto;
-  box-sizing: content-box;
+
 
 }
 
@@ -80,7 +80,8 @@ html, body {
   padding-bottom: 0.4em;
   font-weight: 700;
   text-transform: uppercase;
-
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .belligerents_title{
@@ -92,6 +93,8 @@ html, body {
   padding-bottom: 0.4em;
   font-weight: 700;
   text-transform: uppercase;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .belligerents{
@@ -101,6 +104,8 @@ html, body {
   font-weight: 700;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .belligerents ol{
@@ -126,6 +131,8 @@ html, body {
   padding-bottom: 0.4em;
   text-transform: uppercase;
   font-weight: 700;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 
 }
 
@@ -133,6 +140,8 @@ html, body {
 .flashpoint_container .information_container .information_body .situation_summary{
   text-align: justify;
   font-weight: 400;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .situation_reports_title{
@@ -143,6 +152,8 @@ html, body {
   padding-bottom: 0.4em;
   text-transform: uppercase;
   font-weight: 700;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 
@@ -152,6 +163,8 @@ html, body {
   font-size: 1em;
   line-height: 2.4em;
   font-weight: 400;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 
 }
 
@@ -170,6 +183,8 @@ html, body {
   background: rgba(24, 34, 36, 1);
   color: rgb(240, 240, 240);
   word-wrap: break-word;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 
@@ -197,6 +212,8 @@ html, body {
   font-weight: 600;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 
 }
 
@@ -208,21 +225,22 @@ html, body {
   padding-bottom: 0.4em;
   text-transform: uppercase;
   font-weight: 600;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .sources ol{
   list-style: decimal;
-
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 .flashpoint_container .information_container .information_body .sources li{
   background-color: rgba(24, 34, 36, 1);
-
   padding: 0.7em;
   margin-right: 0.7em;
   margin-bottom: 0.7em;
   font-weight: 400;
-  width: 98%;
 }
 
 .box {
@@ -241,8 +259,6 @@ html, body {
   max-width: 1080px;
   margin: 0 auto;
   position: sticky;
-  top: 0;
-
 }
 
 
@@ -288,5 +304,7 @@ html, body {
   text-transform: uppercase;
   text-align: center;
   background-color: rgba(24, 34, 36, 1);
+
+
 
 }
