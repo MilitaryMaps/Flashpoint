@@ -44,11 +44,8 @@
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
-    let   conflicts = {};
-
-    $.getJSON('data/data.json', function(data) {
-        conflicts = data;
-        console.log(data);
+    const conflicts = $.getJSON('data/data.json', function(data) {
+        return data;
     });
 
     console.log(conflicts)
