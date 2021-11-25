@@ -48,7 +48,7 @@ function addConflictMarker(conflict) {
 function FeaturesConflictMap(region, layer) {
   if (debug){
     layer.on("click", function (e) {
-        console.log(region.properties.id, region.properties.name, [e.latlng['lat'], e.latlng['lng']]);
+        console.log(region.properties.adm1_code, region.properties.name, [e.latlng['lat'], e.latlng['lng']]);
         console.log(region);
     });
   };
