@@ -44,21 +44,19 @@
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
   <script type="text/javascript">
     const debug = false;
-    if (!debug) {
-      const conflicts = (function () {
-          var json = null;
-          $.ajax({
-              'async': false,
-              'global': false,
-              'url': 'data/data.json',
-              'dataType': "json",
-              'success': function (data) {
-                  json = data;
-              }
-          });
-          return json;
-      })();
-    };
+    const conflicts = (function () {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'data/data.json',
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+    })();
 
     let conflict_regions_features = {
          "type":"FeatureCollection", "features": []
