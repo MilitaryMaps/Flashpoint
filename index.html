@@ -38,7 +38,7 @@
     </div>
 
   </div>
-  <script type="text/javascript" src="maps/admin1.geojson"></script>
+  <!-- <script type="text/javascript" src="maps/admin1.geojson"></script> -->
   <script type="text/javascript" src="data/conflicts_data.json"></script>
   <script type="text/javascript" src="data/conflict_types_data.json"></script>
   <script type="text/javascript" src="js/flashpoint_functions.js"></script>
@@ -50,7 +50,7 @@
             $.ajax({
                 'async': false,
                 'global': false,
-                'url': 'data/data.json',
+                'url': 'data/conflicts_data.json',
                 'dataType': "json",
                 'success': function (data) {
                     json = data;
